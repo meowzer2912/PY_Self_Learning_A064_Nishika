@@ -17,6 +17,10 @@ def draw_concentric_circles(t, radius):
     for i in range(3):
         current_radius = radius - (i * 20)
         if current_radius > 0:
+            t.penup()
+            t.goto(0, -current_radius)
+            t.setheading(0)
+            t.pendown()
             t.circle(current_radius)
 
 def draw_star(t, size):
