@@ -4,7 +4,7 @@ from openpyxl.styles import Font, PatternFill
 # create workbook and select active sheet
 wb = openpyxl.Workbook()
 ws = wb.active
-ws.title = "Semester Results"
+ws.title = "Semester_Results"
 
 # add headers
 headers = [
@@ -29,7 +29,7 @@ for i in range(n):
     theory = float(input("Enter Theory Marks (out of 50): "))
 
     total = lab + theory
-    if total > 40:
+    if total >= 40:
         result = "Pass"
     else:
         result = "Fail"
